@@ -6,10 +6,28 @@
   </head>
   <body>
     <h1>Exempel med formulär</h1>
-
     <form>
+      <fieldset>
+        <legend>Fyll i en massa skit!</legend>
+        <label for="txtname">Fyll i ditt namn:</label><br>
+        <input type="text" id="txtname" required><br>
+        <label for="selcolor">Välj din favoritfärg</label><br>
+        <select id="selcolor">
+          <option>Röd</option>
+          <option>Grön</option>
+          <option>Rosa</option>
+        </select>
+        <br>
+        <fieldset>
+          <legend>Välj din favoritmånad</legend>
+          <input type="radio" id="rbjan" value="Mört" name="month"> <label for="rbjan">Januari</label><br>
+          <input type="radio" id="rbnov" value="brax" name="month"> <label for="rbnov">November</label><br>
+          <input type="radio" id="rbfeb" value="strömming" name="month"> <label for="rbfeb">Februari</label>
+        </fieldset>
+        <input type="checkbox" id="chkvillkor"> <label for="chkvillkor">Jag godkänner allt"</label><br>
+        <button type="submit">Skicka skiten!</button>
 
+      </fieldset>
     </form>
-
   </body>
 </html>
