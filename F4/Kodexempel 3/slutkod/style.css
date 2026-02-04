@@ -1,0 +1,63 @@
+* { 
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: lavender;
+    --secondary-color: #faebd7;
+    --font-size-base: 16px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--secondary-color);
+}
+
+ul.main-menu {
+    display:flex;
+    background-color: var(--primary-color);
+    list-style-type: none;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: var(--font-size-base);
+}
+
+ul.main-menu>li {
+    position:relative;
+}
+
+ul.main-menu>li>a {
+    display:block;
+    padding: var(--font-size-base);
+    text-decoration: none;
+}
+
+ul.main-menu>li:hover>a{
+    background-color: #b5fa07;
+}
+
+ul.main-menu>li>ul {
+    list-style-type: none;
+    padding-left:0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left:0;
+    display: none;
+}
+
+ul.main-menu>li:hover>ul {
+    display:block;
+}
+
+nav::after {
+    display:block;
+    background-color: var(--primary-color);
+    border:5px solid red;
+    content: 'Jag är ett pseudioelement!';
+}
+
