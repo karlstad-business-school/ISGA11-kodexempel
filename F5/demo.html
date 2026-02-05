@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accent-color Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 0;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        label {
+            display: inline-block;
+            margin-left: 8px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Standard (browser default) */
+        .default input {
+            accent-color: auto;
+        }
+
+        /* Samma färg för allt */
+        .single-color {
+            accent-color: #ff00e6;
+        }
+
+        /* Olika färger per typ */
+        .multi-color input[type="checkbox"] {
+            accent-color: #e63946;
+        }
+
+        .multi-color input[type="radio"] {
+            accent-color: #06a77d;
+        }
+
+        /* Range slider exempel */
+        .range-demo input[type="range"] {
+            accent-color: #ff6b35;
+            width: 100%;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>accent-color Demo</h1>
+
+    <div class="demo-section default">
+        <h2>1. Standard (ingen accent-color)</h2>
+        <fieldset>
+            <legend>Browserens standard-färg</legend>
+            <input type="checkbox" id="cb1" name="food1">
+            <label for="cb1">Checkbox 1</label>
+            <input type="checkbox" id="cb2" name="food1">
+            <label for="cb2">Checkbox 2</label>
+            <br><br>
+            <input type="radio" id="r1" name="size1">
+            <label for="r1">Radio 1</label>
+            <input type="radio" id="r2" name="size1">
+            <label for="r2">Radio 2</label>
+        </fieldset>
+    </div>
+
+    <div class="demo-section single-color">
+        <h2>2. En färg för hela sektionen</h2>
+        <p><code>accent-color: #ff00e6;</code></p>
+        <fieldset>
+            <legend>Rosa accent-färg</legend>
+            <input type="checkbox" id="cb3" name="food2">
+            <label for="cb3">Checkbox 1</label>
+            <input type="checkbox" id="cb4" name="food2">
+            <label for="cb4">Checkbox 2</label>
+            <br><br>
+            <input type="radio" id="r3" name="size2">
+            <label for="r3">Radio 1</label>
+            <input type="radio" id="r4" name="size2">
+            <label for="r4">Radio 2</label>
+        </fieldset>
+    </div>
+
+    <div class="demo-section multi-color">
+        <h2>3. Olika färger per elementtyp</h2>
+        <p>
+            <code>input[type="checkbox"] { accent-color: #e63946; }</code><br>
+            <code>input[type="radio"] { accent-color: #06a77d; }</code>
+        </p>
+        <fieldset>
+            <legend>Anpassade färger</legend>
+            <input type="checkbox" id="cb5" name="food3">
+            <label for="cb5">Röd checkbox</label>
+            <input type="checkbox" id="cb6" name="food3">
+            <label for="cb6">Röd checkbox</label>
+            <br><br>
+            <input type="radio" id="r5" name="size3">
+            <label for="r5">Grön radio</label>
+            <input type="radio" id="r6" name="size3">
+            <label for="r6">Grön radio</label>
+        </fieldset>
+    </div>
+
+    <div class="demo-section range-demo">
+        <h2>4. Fungerar även på range-sliders</h2>
+        <p><code>input[type="range"] { accent-color: #ff6b35; }</code></p>
+        <fieldset>
+            <legend>Range slider</legend>
+            <input type="range" min="0" max="100" value="50">
+        </fieldset>
+    </div>
+
+    <div class="demo-section">
+        <h2>Fördelar med accent-color:</h2>
+        <ul>
+            <li>Enkel att använda - bara en CSS-rad</li>
+            <li>Behåller native funktionalitet och tillgänglighet</li>
+            <li>Fungerar med keyboard navigation</li>
+            <li>Inget behov av JavaScript eller komplexa CSS-tricks</li>
+            <li>Fungerar i alla moderna browsers (Chrome, Firefox, Safari, Edge)</li>
+        </ul>
+    </div>
+</body>
+</html>
