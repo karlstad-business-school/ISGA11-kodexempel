@@ -1,0 +1,28 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+img{
+    width: 25%;
+}
+
+@media screen and (max-width: 499px){
+    img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 899px){
+    img{
+        width: 50%;
+    }
+}

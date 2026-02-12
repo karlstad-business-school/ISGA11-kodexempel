@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+
+#page-div{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    width: 100%;
+    background-color: salmon;
+    padding: 12px;
+}
+
+main{
+    background-color: blueviolet;
+    padding: 12px;
+    width: calc(100% - 256px);
+}
+
+aside{
+    padding: 12px;
+    background-color: greenyellow;
+    width: 256px;
+}
+
+
+footer{
+    padding: 12px;
+    background-color: aqua;
+    width: 100%;
+}
+
+
+@media (max-width: 612px){
+    header, footer{
+        display: none;
+    }
+
+    main, aside{
+        width: 100%;
+    }
+}
